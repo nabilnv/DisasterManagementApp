@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="severitySpinner" type="id" />
+    <item name="typeSpinner" type="id" />
+    <item name="descriptionInput" type="id" />
+    <item name="locationInput" type="id" />
+    <item name="submitButton" type="id" />
+</resources>

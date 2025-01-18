@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Search bar at the top -->
+    <LinearLayout
+        android:id="@+id/searchBarLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/white">
+
+        <!-- Search Input Field -->
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:hint="Search location"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"/>
+
+        <!-- Search Icon on the right -->
+        <ImageView
+            android:src="@drawable/search_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="Search Icon" />
+    </LinearLayout>
+
+    <!-- MapView that occupies the rest of the screen -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBarLayout"/>
+
+    <Button
+        android:id="@+id/currentLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Current Location"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp" />
+
+</RelativeLayout>

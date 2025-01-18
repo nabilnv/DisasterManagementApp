@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/proximityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proximity: N/A"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/lightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Light: N/A"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <!-- Page Title -->
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Malaysia Safe"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="30dp"
+                />
+
+            <!-- Emergency Alerts Dashboard Heading -->
+            <TextView
+                android:id="@+id/dashboardHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Alerts Dashboard"
+                android:textSize="20sp"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold"
+                android:layout_below="@id/pageTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                />
+
+            <!-- Select Disaster Type Subheading -->
+            <TextView
+                android:id="@+id/disasterTypeSubheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select disaster type to monitor"
+                android:textSize="16sp"
+                android:layout_below="@id/dashboardHeading"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                />
+
+            <!-- Main Cards Section -->
+            <GridLayout
+                android:id="@+id/mainCardsGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:orientation="horizontal"
+                android:layout_below="@id/disasterTypeSubheading"
+                android:layout_marginBottom="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <!-- Flood Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/floodCard"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_columnSpan="1"
+                    android:layout_rowSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Flood"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:src="@drawable/ic_flood"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left|center"
+                        android:layout_marginEnd="100dp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Landslide Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/landslideCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:padding="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Landslide"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:src="@drawable/ic_landslide"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left|center"
+                        android:layout_marginEnd="120dp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Haze Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hazeCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_rowSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Haze"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_gravity="center" />
+                    <ImageView
+                        android:src="@drawable/ic_haze"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left|center"
+                        android:layout_marginEnd="100dp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Tsunami Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tsunamiCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:padding="16dp"
+                    android:backgroundTint="@color/primaryColor"
+                    app:cardElevation="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Tsunami"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+                    <ImageView
+                        android:src="@drawable/ic_tsunami"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_gravity="left|center"
+                        android:layout_marginEnd="120dp" />
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+            <TextView
+                android:id="@+id/quickActionsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick Actions"
+                android:textSize="20sp"
+                android:layout_below="@id/mainCardsGrid"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+
+
+
+            <!-- Buttons Section -->
+            <Button
+                android:id="@+id/emergencyCallButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/red"
+                android:text="Emergency Call"
+                android:layout_below="@id/quickActionsTitle"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <Button
+                android:id="@+id/shareLocationButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Share Location"
+                android:backgroundTint="@color/green"
+                android:layout_below="@id/emergencyCallButton"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <Button
+                android:id="@+id/viewAlertsButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="View Alerts"
+                android:backgroundTint="@color/light_red"
+                android:layout_below="@id/shareLocationButton"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+
+            <!-- Recent Alerts Section -->
+            <TextView
+                android:id="@+id/recentAlertsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Alerts"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_below="@id/viewAlertsButton"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/recentAlertsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/recentAlertsTitle"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+                <!-- Recent Alerts will be dynamically added here -->
+            </LinearLayout>
+        </RelativeLayout>
+</ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+</RelativeLayout>

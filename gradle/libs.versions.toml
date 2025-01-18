@@ -1,0 +1,43 @@
+[versions]
+agp = "8.8.0"
+cardviewVersion = "1.0.0-alpha1"
+firebaseAuth = "23.1.0"
+firebaseBom = "33.7.0"
+firebaseFirestore = "25.1.1"
+firebaseFirestoreVersion = "24.0.1"
+googleFirebaseAuth = "21.0.1"
+kotlin = "2.0.0"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+cardview = "1.0.0"
+material = "1.12.0"
+playServicesAuth = "21.3.0"
+playServicesLocation = "21.3.0"
+uiGraphicsAndroid = "1.7.6"
+
+[libraries]
+androidx-cardview-v100alpha1 = { module = "androidx.cardview:cardview", version.ref = "cardviewVersion" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
+firebase-auth-v2101 = { module = "com.google.firebase:firebase-auth", version.ref = "googleFirebaseAuth" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore", version.ref = "firebaseFirestore" }
+firebase-firestore-v2401 = { module = "com.google.firebase:firebase-firestore", version.ref = "firebaseFirestoreVersion" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+androidx-ui-graphics-android = { group = "androidx.compose.ui", name = "ui-graphics-android", version.ref = "uiGraphicsAndroid" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
